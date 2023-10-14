@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Kpi.API.props" />
+</Project>
