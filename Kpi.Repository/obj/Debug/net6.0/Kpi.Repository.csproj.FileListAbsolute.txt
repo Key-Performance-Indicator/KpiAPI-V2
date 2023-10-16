@@ -15,3 +15,20 @@ C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.Repository
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.Repository\obj\Debug\net6.0\Kpi.Repository.pdb
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.Repository\obj\Debug\net6.0\Kpi.Repository.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.Repository\obj\Debug\net6.0\ref\Kpi.Repository.dll
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\bin\Debug\net6.0\Kpi.Repository.deps.json
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\bin\Debug\net6.0\Kpi.Repository.runtimeconfig.json
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\bin\Debug\net6.0\Kpi.Repository.dll
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\bin\Debug\net6.0\Kpi.Repository.pdb
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\bin\Debug\net6.0\Kpi.Core.dll
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\bin\Debug\net6.0\Kpi.Core.pdb
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\obj\Debug\net6.0\Kpi.Repository.csproj.AssemblyReference.cache
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\obj\Debug\net6.0\Kpi.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\obj\Debug\net6.0\Kpi.Repository.AssemblyInfoInputs.cache
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\obj\Debug\net6.0\Kpi.Repository.AssemblyInfo.cs
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\obj\Debug\net6.0\Kpi.Repository.csproj.CoreCompileInputs.cache
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\obj\Debug\net6.0\Kpi.Repository.csproj.CopyComplete
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\obj\Debug\net6.0\Kpi.Repository.dll
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\obj\Debug\net6.0\refint\Kpi.Repository.dll
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\obj\Debug\net6.0\Kpi.Repository.pdb
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\obj\Debug\net6.0\Kpi.Repository.genruntimeconfig.cache
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Repository\obj\Debug\net6.0\ref\Kpi.Repository.dll

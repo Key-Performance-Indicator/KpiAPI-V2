@@ -15,4 +15,10 @@ namespace Kpi.Core.Enums
         Admin,
         User,
     }
+    public enum Tag
+    {
+        Backend = 1,
+        Frontend = 2,
+        Bug = 3,
+    }
 }
