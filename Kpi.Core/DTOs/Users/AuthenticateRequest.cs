@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kpi.Core.Models.Users
+namespace Kpi.Core.DTOs.Users
 {
     public class AuthenticateRequest
     {

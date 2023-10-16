@@ -1,10 +1,10 @@
-﻿using Kpi.Core.Models.Users;
-using Kpi.Core.Models;
+﻿using Kpi.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Kpi.Core.DTOs.Users;
 
 namespace Kpi.Core.Services
 {

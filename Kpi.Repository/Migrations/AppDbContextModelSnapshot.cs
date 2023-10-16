@@ -17,10 +17,30 @@ namespace Kpi.Repository.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.1")
+                .HasAnnotation("ProductVersion", "7.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Kpi.Core.Models.Projects.Project", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ProjectName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("SprintId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SprintId");
+
+                    b.ToTable("Projects");
+                });
 
             modelBuilder.Entity("Kpi.Core.Models.Role", b =>
                 {
@@ -28,7 +48,7 @@ namespace Kpi.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
@@ -43,6 +63,162 @@ namespace Kpi.Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Role", (string)null);
+                });
+
+            modelBuilder.Entity("Kpi.Core.Models.Sprints.Sprint", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("DokumentUri")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SprintName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Sprint");
+                });
+
+            modelBuilder.Entity("Kpi.Core.Models.Tasks.Task", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Estimation")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("SprintId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Tag")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SprintId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Tasks");
+                });
+
+            modelBuilder.Entity("Kpi.Core.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("ProjectId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProjectId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Kpi.Core.Models.Projects.Project", b =>
+                {
+                    b.HasOne("Kpi.Core.Models.Sprints.Sprint", "Sprint")
+                        .WithMany("Projects")
+                        .HasForeignKey("SprintId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Sprint");
+                });
+
+            modelBuilder.Entity("Kpi.Core.Models.Tasks.Task", b =>
+                {
+                    b.HasOne("Kpi.Core.Models.Sprints.Sprint", "Sprint")
+                        .WithMany("Tasks")
+                        .HasForeignKey("SprintId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Kpi.Core.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Sprint");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Kpi.Core.Models.User", b =>
+                {
+                    b.HasOne("Kpi.Core.Models.Projects.Project", null)
+                        .WithMany("Users")
+                        .HasForeignKey("ProjectId");
+
+                    b.HasOne("Kpi.Core.Models.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+                });
+
+            modelBuilder.Entity("Kpi.Core.Models.Projects.Project", b =>
+                {
+                    b.Navigation("Users");
+                });
+
+            modelBuilder.Entity("Kpi.Core.Models.Sprints.Sprint", b =>
+                {
+                    b.Navigation("Projects");
+
+                    b.Navigation("Tasks");
                 });
 #pragma warning restore 612, 618
         }

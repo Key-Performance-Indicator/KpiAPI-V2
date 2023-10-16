@@ -1,7 +1,7 @@
 ﻿using BCrypt.Net;
 using Kpi.Core.Authentications;
+using Kpi.Core.DTOs.Users;
 using Kpi.Core.Helpers;
-using Kpi.Core.Models.Users;
 using Kpi.Core.Repositories;
 using Kpi.Core.Services;
 using Kpi.Service.Authentications;

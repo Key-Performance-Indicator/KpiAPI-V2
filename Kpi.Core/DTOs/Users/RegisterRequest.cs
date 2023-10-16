@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace Kpi.Core.Models.Users
+namespace Kpi.Core.DTOs.Users
 {
     public class RegisterRequest
     {

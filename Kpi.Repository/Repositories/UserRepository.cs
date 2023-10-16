@@ -1,5 +1,4 @@
 ﻿using Kpi.Core.Models;
-using Kpi.Core.Models.Users;
 using Kpi.Core.Repositories;
 using Microsoft.EntityFrameworkCore;
 using NLayer.Repository;

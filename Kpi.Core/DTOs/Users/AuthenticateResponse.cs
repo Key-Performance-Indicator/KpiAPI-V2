@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Kpi.Core.Models;
 
-namespace Kpi.Core.Models.Users
+namespace Kpi.Core.DTOs.Users
 {
     public class AuthenticateResponse
     {
@@ -26,6 +27,6 @@ namespace Kpi.Core.Models.Users
         }
     }
 
-  
+
 
 }

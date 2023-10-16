@@ -15,7 +15,8 @@ namespace Kpi.Repository.Configurations
         {
             builder.HasOne(p => p.Sprint)
            .WithMany(s => s.Projects)
-           .HasForeignKey(p => p.SprintId);
+           .HasForeignKey(p => p.SprintId);  
+
         }
     }
 }
