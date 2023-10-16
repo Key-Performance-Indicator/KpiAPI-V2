@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.API\\Kpi.API.csproj": {}
+    "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.API\\Kpi.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.API\\Kpi.API.csproj": {
+    "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.API\\Kpi.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.API\\Kpi.API.csproj",
+        "projectUniqueName": "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.API\\Kpi.API.csproj",
         "projectName": "Kpi.API",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.API\\Kpi.API.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.API\\obj\\",
+        "projectPath": "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.API\\Kpi.API.csproj",
+        "packagesPath": "C:\\Users\\ekiziltoprak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ekiziltoprak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Service\\Kpi.Service.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Service\\Kpi.Service.csproj"
+              "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Service\\Kpi.Service.csproj": {
+                "projectPath": "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Service\\Kpi.Service.csproj"
               }
             }
           }
@@ -50,23 +50,23 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
@@ -96,21 +96,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Core\\Kpi.Core.csproj": {
+    "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Core\\Kpi.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Core\\Kpi.Core.csproj",
+        "projectUniqueName": "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Core\\Kpi.Core.csproj",
         "projectName": "Kpi.Core",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Core\\Kpi.Core.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Core\\obj\\",
+        "projectPath": "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Core\\Kpi.Core.csproj",
+        "packagesPath": "C:\\Users\\ekiziltoprak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ekiziltoprak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -151,21 +151,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Repository\\Kpi.Repository.csproj": {
+    "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Repository\\Kpi.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Repository\\Kpi.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Repository\\Kpi.Repository.csproj",
         "projectName": "Kpi.Repository",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Repository\\Kpi.Repository.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Repository\\obj\\",
+        "projectPath": "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Repository\\Kpi.Repository.csproj",
+        "packagesPath": "C:\\Users\\ekiziltoprak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ekiziltoprak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -179,8 +179,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Core\\Kpi.Core.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Core\\Kpi.Core.csproj"
+              "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Core\\Kpi.Core.csproj": {
+                "projectPath": "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Core\\Kpi.Core.csproj"
               }
             }
           }
@@ -201,23 +201,23 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[7.0.5, )"
             }
           },
           "imports": [
@@ -236,21 +236,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Service\\Kpi.Service.csproj": {
+    "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Service\\Kpi.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Service\\Kpi.Service.csproj",
+        "projectUniqueName": "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Service\\Kpi.Service.csproj",
         "projectName": "Kpi.Service",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Service\\Kpi.Service.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Service\\obj\\",
+        "projectPath": "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Service\\Kpi.Service.csproj",
+        "packagesPath": "C:\\Users\\ekiziltoprak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ekiziltoprak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -264,8 +264,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Repository\\Kpi.Repository.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Repository\\Kpi.Repository.csproj"
+              "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Repository\\Kpi.Repository.csproj": {
+                "projectPath": "C:\\Users\\ekiziltoprak\\Desktop\\KpiAPI-V2\\Kpi.Repository\\Kpi.Repository.csproj"
               }
             }
           }
@@ -309,7 +309,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

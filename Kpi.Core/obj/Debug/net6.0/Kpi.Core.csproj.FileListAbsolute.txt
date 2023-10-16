@@ -10,3 +10,14 @@ C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.Core\obj\D
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.Core\obj\Debug\net6.0\refint\Kpi.Core.dll
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.Core\obj\Debug\net6.0\Kpi.Core.pdb
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.Core\obj\Debug\net6.0\ref\Kpi.Core.dll
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Core\bin\Debug\net6.0\Kpi.Core.deps.json
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Core\bin\Debug\net6.0\Kpi.Core.dll
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Core\bin\Debug\net6.0\Kpi.Core.pdb
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Core\obj\Debug\net6.0\Kpi.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Core\obj\Debug\net6.0\Kpi.Core.AssemblyInfoInputs.cache
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Core\obj\Debug\net6.0\Kpi.Core.AssemblyInfo.cs
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Core\obj\Debug\net6.0\Kpi.Core.csproj.CoreCompileInputs.cache
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Core\obj\Debug\net6.0\Kpi.Core.dll
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Core\obj\Debug\net6.0\refint\Kpi.Core.dll
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Core\obj\Debug\net6.0\Kpi.Core.pdb
+C:\Users\ekiziltoprak\Desktop\KpiAPI-V2\Kpi.Core\obj\Debug\net6.0\ref\Kpi.Core.dll
