@@ -14,7 +14,12 @@ namespace Kpi.Repository.Configurations
             builder.Property(x => x.Id).UseIdentityColumn();
             builder.Property(x => x.RoleName).IsRequired();
 
-            builder.ToTable("Role");
+            builder.ToTable("Roles"); 
+
+            builder.HasMany(r => r.UserRolesProjects)
+                   .WithOne(ur => ur.Role)
+                   .HasForeignKey(ur => ur.RoleId)
+                   .IsRequired();
         }
     }
 }

@@ -27,8 +27,20 @@ namespace Kpi.Repository.Repositories
 
         public async Task<User> GetUserByUserName(string userName)
         {
-            var user = await _context.Users.Where(x => x.Username == userName).FirstOrDefaultAsync();
-            return user;
+            try
+            {
+                userName = userName.Trim();
+                var user = await _context.Users.Where(x => x.Username == userName).FirstOrDefaultAsync();
+                if (user == null)
+                    return null;
+                return user;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+           
         }
 
         

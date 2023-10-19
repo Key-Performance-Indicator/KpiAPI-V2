@@ -12,7 +12,7 @@ using NLayer.Repository;
 namespace Kpi.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231016194459_SecondMigration")]
+    [Migration("20231019201445_SecondMigration")]
     partial class SecondMigration
     {
         /// <inheritdoc />
@@ -27,9 +27,8 @@ namespace Kpi.Repository.Migrations
 
             modelBuilder.Entity("Kpi.Core.Models.Projects.Project", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
 
                     b.Property<string>("ProjectName")
                         .IsRequired()
@@ -65,7 +64,7 @@ namespace Kpi.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Role", (string)null);
+                    b.ToTable("Roles", (string)null);
                 });
 
             modelBuilder.Entity("Kpi.Core.Models.Sprints.Sprint", b =>
@@ -148,23 +147,41 @@ namespace Kpi.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("ProjectId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
+                    b.ToTable("Users", (string)null);
+                });
+
+            modelBuilder.Entity("Kpi.Core.Models.UserRolesProject", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
+
+                    b.Property<int>("ProjectId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId1")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId");
+
                     b.HasIndex("ProjectId");
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("Users");
+                    b.HasIndex("UserId1");
+
+                    b.ToTable("UserRolesProject");
                 });
 
             modelBuilder.Entity("Kpi.Core.Models.Projects.Project", b =>
@@ -172,7 +189,7 @@ namespace Kpi.Repository.Migrations
                     b.HasOne("Kpi.Core.Models.Sprints.Sprint", "Sprint")
                         .WithMany("Projects")
                         .HasForeignKey("SprintId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Sprint");
@@ -197,24 +214,41 @@ namespace Kpi.Repository.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Kpi.Core.Models.User", b =>
+            modelBuilder.Entity("Kpi.Core.Models.UserRolesProject", b =>
                 {
-                    b.HasOne("Kpi.Core.Models.Projects.Project", null)
-                        .WithMany("Users")
-                        .HasForeignKey("ProjectId");
+                    b.HasOne("Kpi.Core.Models.Projects.Project", "Project")
+                        .WithMany("UserRolesProjects")
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Kpi.Core.Models.Role", "Role")
-                        .WithMany()
+                        .WithMany("UserRolesProjects")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Kpi.Core.Models.User", "User")
+                        .WithMany("UserRolesProjects")
+                        .HasForeignKey("UserId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Project");
+
                     b.Navigation("Role");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Kpi.Core.Models.Projects.Project", b =>
                 {
-                    b.Navigation("Users");
+                    b.Navigation("UserRolesProjects");
+                });
+
+            modelBuilder.Entity("Kpi.Core.Models.Role", b =>
+                {
+                    b.Navigation("UserRolesProjects");
                 });
 
             modelBuilder.Entity("Kpi.Core.Models.Sprints.Sprint", b =>
@@ -222,6 +256,11 @@ namespace Kpi.Repository.Migrations
                     b.Navigation("Projects");
 
                     b.Navigation("Tasks");
+                });
+
+            modelBuilder.Entity("Kpi.Core.Models.User", b =>
+                {
+                    b.Navigation("UserRolesProjects");
                 });
 #pragma warning restore 612, 618
         }

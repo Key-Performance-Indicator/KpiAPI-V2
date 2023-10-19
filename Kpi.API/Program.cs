@@ -1,7 +1,9 @@
 using System;
 using System.Reflection;
+using System.Text.Json;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Kpi.API.Middlewares;
 using Kpi.Core.Authentications;
 using Kpi.Core.Helpers;
 using Kpi.Core.Services;
@@ -47,6 +49,22 @@ builder.Services.AddScoped<IUserService, UserService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+
+
+{
+    //Middleware
+    app.UseCors(x => x
+        .AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader());
+
+    app.UseMiddleware<JwtMiddlerware>();
+
+    app.MapControllers();
+}
+
+
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -54,7 +72,5 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-app.MapControllers();
 
 app.Run();

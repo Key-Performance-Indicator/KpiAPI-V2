@@ -18,6 +18,7 @@ namespace NLayer.Repository
 
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<UserRolesProject> UserRolesProject { get; set; }
         public virtual DbSet<Project> Projects { get; set; }
 
         public virtual DbSet<Kpi.Core.Models.Tasks.Task> Tasks { get; set; }

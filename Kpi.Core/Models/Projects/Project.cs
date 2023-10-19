@@ -12,19 +12,14 @@ namespace Kpi.Core.Models.Projects
 {
     public class Project
     {
-        public Project()
-        {
-            Id = Guid.NewGuid();
-        }
-
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string ProjectName { get; set; }
 
         [ForeignKey(nameof(Sprint))]
         public Guid SprintId { get; set; }
         public Sprint Sprint { get; set; }
 
-        public List<User> Users { get; set; }
+        public ICollection<UserRolesProject> UserRolesProjects { get; set; }
     }
 
     //public class Project : BaseEntity

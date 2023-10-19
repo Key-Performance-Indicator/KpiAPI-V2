@@ -22,7 +22,7 @@ namespace Kpi.Core.DTOs.Users
             FirstName = user.FirstName;
             LastName = user.LastName;
             Username = user.Username;
-            Role = user.Role;
+            //Role = user.Role;
             Token = token;
         }
     }

@@ -2,6 +2,7 @@
 using Kpi.Core.Authentications;
 using Kpi.Core.DTOs.Users;
 using Kpi.Core.Helpers;
+using Kpi.Core.Models;
 using Kpi.Core.Repositories;
 using Kpi.Core.Services;
 using Kpi.Service.Authentications;
@@ -27,11 +28,9 @@ namespace Kpi.Service.Services.User
             _appSettings = appSettings.Value;
             _userRepository = userRepository;
         }
-
-
-        public AuthenticateResponse Authenticate(AuthenticateRequest model)
+        public async Task<AuthenticateResponse> Authenticate(AuthenticateRequest model)
         {
-            var user = _context.Users.SingleOrDefault(x => x.Username == model.UserName);
+            var user = await _userRepository.GetUserByUserName(model.UserName);
 
             // validate
             if (user == null || !BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash))
@@ -42,23 +41,10 @@ namespace Kpi.Service.Services.User
 
             return new AuthenticateResponse(user, jwtToken);
         }
-
-        public IEnumerable<Core.Models.User> GetAll()
-        {
-            return _context.Users;
-        }
-
-        public Core.Models.User GetById(int id)
-        {
-            var user = _context.Users.Find(id);
-            if (user == null) throw new KeyNotFoundException("User not found");
-            return user;
-        }
-
         public Core.Models.User Register(RegisterRequest model)
         {
             // Kullanıcı kontrol 
-            if (_userRepository.GetUserByUserName(model.Username) != null)
+            if (_userRepository.GetUserByUserName(model.Username) == null)
                 throw new ApplicationException("Bu kullanıcı adı zaten kullanımda.");
             
             if (model.PasswordConfirm != model.Password)
@@ -75,6 +61,18 @@ namespace Kpi.Service.Services.User
             };
             _userRepository.AddUserAsync(newUser);
             return newUser;
+        }
+
+        public IEnumerable<Core.Models.User> GetAll()
+        {
+            return _context.Users;
+        }
+
+        public Core.Models.User GetById(int id)
+        {
+            var user = _context.Users.Find(id);
+            if (user == null) throw new KeyNotFoundException("User not found");
+            return user;
         }
     }
 }
