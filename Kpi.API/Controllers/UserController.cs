@@ -8,7 +8,7 @@ using Kpi.Core.DTOs.Users;
 
 namespace Kpi.API.Controllers
 {
-
+ 
     [ApiController]
     [Route("[controller]")]
     public class UsersController : ControllerBase
@@ -22,9 +22,9 @@ namespace Kpi.API.Controllers
 
         [AllowAnonymous]
         [HttpPost("[action]")]
-        public IActionResult Register([FromBody] RegisterRequest user)
+        public async Task<IActionResult> Register([FromBody]RegisterRequest user)
         {
-            var res = _userService.Register(user);
+            var res = await _userService.RegisterAsync(user);
             return Ok(res);
         }
 
@@ -36,20 +36,22 @@ namespace Kpi.API.Controllers
             return Ok(response);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var users = _userService.GetAll();
+            var users = await _userService.GetAll();
             return Ok(users);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id:int}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
             // only admins can access other user records
             var currentUser = (User)HttpContext.Items["User"];
 
-            var user = _userService.GetById(id);
+            var user =await _userService.GetById(id);
             return Ok(user);
         }
     }

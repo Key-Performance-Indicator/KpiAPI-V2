@@ -31,8 +31,9 @@ namespace Kpi.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("SprintId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("SprintId")
+                        .IsRequired()
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -66,12 +67,13 @@ namespace Kpi.Repository.Migrations
 
             modelBuilder.Entity("Kpi.Core.Models.Sprints.Sprint", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("DokumentUri")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("EndDate")
@@ -91,19 +93,21 @@ namespace Kpi.Repository.Migrations
 
             modelBuilder.Entity("Kpi.Core.Models.Tasks.Task", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Estimation")
+                    b.Property<int?>("Estimation")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("SprintId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int?>("SprintId")
+                        .HasColumnType("int");
 
                     b.Property<int>("Tag")
                         .HasColumnType("int");
@@ -155,11 +159,11 @@ namespace Kpi.Repository.Migrations
 
             modelBuilder.Entity("Kpi.Core.Models.UserRolesProject", b =>
                 {
-                    b.Property<int>("UserId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("ProjectId")
                         .HasColumnType("int");
@@ -167,16 +171,16 @@ namespace Kpi.Repository.Migrations
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId1")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.HasKey("UserId");
+                    b.HasKey("Id");
 
                     b.HasIndex("ProjectId");
 
                     b.HasIndex("RoleId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("UserRolesProject");
                 });
@@ -196,9 +200,7 @@ namespace Kpi.Repository.Migrations
                 {
                     b.HasOne("Kpi.Core.Models.Sprints.Sprint", "Sprint")
                         .WithMany("Tasks")
-                        .HasForeignKey("SprintId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SprintId");
 
                     b.HasOne("Kpi.Core.Models.User", "User")
                         .WithMany()
@@ -227,7 +229,7 @@ namespace Kpi.Repository.Migrations
 
                     b.HasOne("Kpi.Core.Models.User", "User")
                         .WithMany("UserRolesProjects")
-                        .HasForeignKey("UserId1")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

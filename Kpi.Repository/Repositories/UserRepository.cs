@@ -20,7 +20,7 @@ namespace Kpi.Repository.Repositories
 
         public async Task<User> AddUserAsync(User user)
         {
-            await AddAsync(user);
+            var res = _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
             return user;
         }
@@ -41,6 +41,15 @@ namespace Kpi.Repository.Repositories
                 throw ex;
             }
            
+        }
+
+        public async Task<List<User>> GetAllUsers()
+        {
+            return await _context.Users.ToListAsync();
+        }
+        public async Task<User> GetUserById(int userId)
+        {
+            return await _context.Users.FindAsync(userId);
         }
 
         

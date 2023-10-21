@@ -18,15 +18,18 @@ namespace Kpi.Service.Services.User
         private IJwtUtils _jwtUtils;
         private readonly AppSettings _appSettings;
         private readonly IUserRepository _userRepository;
+        private readonly IUserRolesProjectRepository _userRolesProjectRepository;
         public UserService(
             AppDbContext context,
             IJwtUtils jwtUtils,
-            IOptions<AppSettings> appSettings, IUserRepository userRepository)
+            IOptions<AppSettings> appSettings, IUserRepository userRepository, IUserRolesProjectRepository userRolesProjectRepository)
         {
             _context = context;
             _jwtUtils = jwtUtils;
             _appSettings = appSettings.Value;
             _userRepository = userRepository;
+            _userRolesProjectRepository = userRolesProjectRepository;
+
         }
         public async Task<AuthenticateResponse> Authenticate(AuthenticateRequest model)
         {
@@ -36,15 +39,17 @@ namespace Kpi.Service.Services.User
             if (user == null || !BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash))
                 return null;
 
+            var roleList = await _userRolesProjectRepository.GetByRolesByUserId(user.Id);
+
             // authentication successful so generate jwt token
-            var jwtToken = _jwtUtils.GenerateJwtToken(user);
+            var jwtToken = _jwtUtils.GenerateJwtToken(user, roleList);
 
             return new AuthenticateResponse(user, jwtToken);
         }
-        public Core.Models.User Register(RegisterRequest model)
+        public async Task<Core.Models.User> RegisterAsync(RegisterRequest model)
         {
             // Kullanıcı kontrol 
-            if (_userRepository.GetUserByUserName(model.Username) == null)
+            if (await _userRepository.GetUserByUserName(model.Username) != null)
                 throw new ApplicationException("Bu kullanıcı adı zaten kullanımda.");
             
             if (model.PasswordConfirm != model.Password)
@@ -59,18 +64,25 @@ namespace Kpi.Service.Services.User
                 FirstName = model.FirstName,
                 LastName = model.LastName,
             };
-            _userRepository.AddUserAsync(newUser);
+            var res = await _userRepository.AddUserAsync(newUser);
+            if (res != null)
+                return null;
             return newUser;
         }
 
-        public IEnumerable<Core.Models.User> GetAll()
+        public async Task<List<Role>> GetRolesByUserID(int userId)
         {
-            return _context.Users;
+            return await _userRolesProjectRepository.GetByRolesByUserId(userId);
         }
 
-        public Core.Models.User GetById(int id)
+        public async Task<List<Core.Models.User>> GetAll()
         {
-            var user = _context.Users.Find(id);
+            return await _userRepository.GetAllUsers();
+        }
+
+        public async Task<Core.Models.User> GetById(int id)
+        {
+            var user =await _userRepository.GetUserById(id);
             if (user == null) throw new KeyNotFoundException("User not found");
             return user;
         }

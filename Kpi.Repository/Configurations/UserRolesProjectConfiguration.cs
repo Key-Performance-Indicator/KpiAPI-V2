@@ -14,7 +14,7 @@ namespace Kpi.Repository.Configurations
 
         public void Configure(EntityTypeBuilder<UserRolesProject> builder)
         {
-            builder.HasKey(ur => new { ur.UserId, ur.RoleId , ur.ProjectId});
+            builder.HasKey(ur => ur.Id);
 
             builder.HasOne(ur => ur.User)
                    .WithMany(u => u.UserRolesProjects)

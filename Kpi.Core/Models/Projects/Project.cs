@@ -16,7 +16,7 @@ namespace Kpi.Core.Models.Projects
         public string ProjectName { get; set; }
 
         [ForeignKey(nameof(Sprint))]
-        public Guid SprintId { get; set; }
+        public int? SprintId { get; set; }
         public Sprint Sprint { get; set; }
 
         public ICollection<UserRolesProject> UserRolesProjects { get; set; }

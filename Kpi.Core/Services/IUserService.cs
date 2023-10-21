@@ -11,8 +11,9 @@ namespace Kpi.Core.Services
     public interface IUserService
     {
         Task<AuthenticateResponse> Authenticate(AuthenticateRequest model);
-        IEnumerable<User> GetAll();
-        User GetById(int id);
-        User Register(RegisterRequest model);
+        Task<List<Core.Models.User>> GetAll();
+        Task<Core.Models.User> GetById(int id);
+        Task<Core.Models.User> RegisterAsync(RegisterRequest model);
+        Task<List<Role>> GetRolesByUserID(int userId);
     }
 }

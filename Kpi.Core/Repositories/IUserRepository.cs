@@ -11,5 +11,7 @@ namespace Kpi.Core.Repositories
     {
         Task<User> AddUserAsync(User user);
         Task<User> GetUserByUserName(string userName);
+        Task<List<User>> GetAllUsers();
+        Task<User> GetUserById(int userId);
     }
 }

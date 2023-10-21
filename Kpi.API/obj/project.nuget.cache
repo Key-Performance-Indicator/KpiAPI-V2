@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ieP4eWsHBTwPKUsJOfupt93W9xcuP8zfPZ36lcW76HTmtYAzDK0cFrbkxzPtc8p5+m1PF8J1WGIgkWAwiuGaaA==",
+  "dgSpecHash": "GodragWtleOkGWYbEKSI4onk1nArI8nrKQkL59rrxfl1FLcJ2G7FJOE84b+x1I5292oheEBTdUP2RKoM1gDk+g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.API\\Kpi.API.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.23\\microsoft.aspnetcore.authentication.jwtbearer.6.0.23.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

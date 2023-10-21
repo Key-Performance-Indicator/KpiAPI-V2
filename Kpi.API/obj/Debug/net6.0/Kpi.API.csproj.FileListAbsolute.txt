@@ -191,3 +191,4 @@ C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\obj\De
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\obj\Debug\net6.0\Kpi.API.pdb
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\obj\Debug\net6.0\Kpi.API.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\obj\Debug\net6.0\ref\Kpi.API.dll
+C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
