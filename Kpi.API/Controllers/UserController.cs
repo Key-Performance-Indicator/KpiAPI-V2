@@ -10,7 +10,7 @@ namespace Kpi.API.Controllers
 {
  
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
         private IUserService _userService;
@@ -20,39 +20,23 @@ namespace Kpi.API.Controllers
             _userService = userService;
         }
 
+
         [AllowAnonymous]
         [HttpPost("[action]")]
-        public async Task<IActionResult> Register([FromBody]RegisterRequest user)
+        public async Task<IActionResult> Authenticate([FromBody]AuthenticateRequest model)
+        
+        {
+            var response = await _userService.Authenticate(model);
+            return Ok(response);
+        }
+        [AllowAnonymous]
+        [HttpPost("[action]")]
+        public async Task<IActionResult> Register([FromBody] RegisterRequest user)
         {
             var res = await _userService.RegisterAsync(user);
             return Ok(res);
         }
 
-        [AllowAnonymous]
-        [HttpPost("[action]")]
-        public async Task<IActionResult> Authenticate([FromBody]AuthenticateRequest model)
-        {
-            var response = await _userService.Authenticate(model);
-            return Ok(response);
-        }
 
-        [Authorize(Roles = "Admin")]
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
-        {
-            var users = await _userService.GetAll();
-            return Ok(users);
-        }
-
-        [Authorize(Roles = "Admin")]
-        [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetById(int id)
-        {
-            // only admins can access other user records
-            var currentUser = (User)HttpContext.Items["User"];
-
-            var user =await _userService.GetById(id);
-            return Ok(user);
-        }
     }
 }

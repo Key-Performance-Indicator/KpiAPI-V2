@@ -18,7 +18,7 @@ namespace Kpi.Repository.Repositories
         }
         public async Task<List<Role>> GetByRolesByUserId(int userId)
         {
-            var userRoles = await _context.UserRolesProject
+            var userRoles = await _context.UserRoles
                     .Where(urp => urp.UserId == userId)
                     .Select(urp => urp.Role)
                     .ToListAsync();

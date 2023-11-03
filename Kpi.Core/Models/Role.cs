@@ -11,7 +11,7 @@ namespace Kpi.Core.Models
     {
        public string RoleName { get; set; }
 
-        public ICollection<UserRolesProject> UserRolesProjects { get; set; }
+        public ICollection<UserRoles> UserRoles { get; set; }
 
     }
 }

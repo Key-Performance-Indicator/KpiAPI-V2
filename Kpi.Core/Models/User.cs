@@ -13,7 +13,8 @@ namespace Kpi.Core.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Username { get; set; }
-        public ICollection<UserRolesProject> UserRolesProjects { get; set; }   
+        public ICollection<UserProject> UserProject { get; set; }   
+        public ICollection<UserRoles> UserRoles { get; set; }
 
         [JsonIgnore]
         public string PasswordHash { get; set; }

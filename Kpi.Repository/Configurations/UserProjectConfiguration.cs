@@ -9,23 +9,19 @@ using System.Threading.Tasks;
 
 namespace Kpi.Repository.Configurations
 {
-    public class UserRolesProjectConfiguration
+    public class UserProjectConfiguration
     {
 
-        public void Configure(EntityTypeBuilder<UserRolesProject> builder)
+        public void Configure(EntityTypeBuilder<UserProject> builder)
         {
             builder.HasKey(ur => ur.Id);
 
             builder.HasOne(ur => ur.User)
-                   .WithMany(u => u.UserRolesProjects)
+                   .WithMany(u => u.UserProject)
                    .HasForeignKey(ur => ur.UserId);
 
-            builder.HasOne(ur => ur.Role)
-                   .WithMany(r => r.UserRolesProjects)
-                   .HasForeignKey(ur => ur.RoleId);
-
             builder.HasOne(ur => ur.Project)
-                .WithMany(u => u.UserRolesProjects)
+                .WithMany(u => u.UserProject)
                 .HasForeignKey(ur => ur.ProjectId);
 
             builder.ToTable("UserRolesProject");

@@ -16,7 +16,7 @@ namespace Kpi.Repository.Configurations
 
             builder.ToTable("Roles"); 
 
-            builder.HasMany(r => r.UserRolesProjects)
+            builder.HasMany(r => r.UserRoles)
                    .WithOne(ur => ur.Role)
                    .HasForeignKey(ur => ur.RoleId)
                    .IsRequired();

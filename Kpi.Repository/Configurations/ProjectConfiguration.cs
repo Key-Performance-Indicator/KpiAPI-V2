@@ -24,7 +24,7 @@ namespace Kpi.Repository.Configurations
                    .HasForeignKey(p => p.SprintId)
                    .OnDelete(DeleteBehavior.Restrict); 
 
-            builder.HasMany(p => p.UserRolesProjects)
+            builder.HasMany(p => p.UserProject)
                    .WithOne(urp => urp.Project)
                    .HasForeignKey(urp => urp.ProjectId);
 

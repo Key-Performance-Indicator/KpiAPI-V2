@@ -19,7 +19,7 @@ namespace Kpi.Core.Models.Projects
         public int? SprintId { get; set; }
         public Sprint Sprint { get; set; }
 
-        public ICollection<UserRolesProject> UserRolesProjects { get; set; }
+        public ICollection<UserProject> UserProject { get; set; }
     }
 
     //public class Project : BaseEntity
