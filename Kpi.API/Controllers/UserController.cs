@@ -10,7 +10,7 @@ namespace Kpi.API.Controllers
 {
  
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class UsersController : ControllerBase
     {
         private IUserService _userService;

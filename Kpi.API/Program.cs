@@ -113,10 +113,10 @@ builder.Services.AddSwaggerGen(option =>
     builder.Services.AddScoped<IJwtUtils, JwtUtils>();
     builder.Services.AddScoped<IUserService, UserService>();
     builder.Services.AddScoped<IUserRepository, UserRepository>();
-    builder.Services.AddScoped<IUserRolesProjectRepository, UserRolesProjectRepository>();
+    builder.Services.AddScoped<IUserProjectRepository, UserProjectRepository>();
+    builder.Services.AddScoped<IUserRolesRepository, UserRolesRepository>();
 
-
-    var app = builder.Build();
+var app = builder.Build();
 
 
     if (app.Environment.IsDevelopment())

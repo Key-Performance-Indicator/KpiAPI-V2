@@ -102,6 +102,7 @@ C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\bin\De
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\bin\Debug\net6.0\EntityFramework.SqlServer.dll
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\bin\Debug\net6.0\EntityFramework.dll
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
@@ -191,4 +192,3 @@ C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\obj\De
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\obj\Debug\net6.0\Kpi.API.pdb
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\obj\Debug\net6.0\Kpi.API.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\obj\Debug\net6.0\ref\Kpi.API.dll
-C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

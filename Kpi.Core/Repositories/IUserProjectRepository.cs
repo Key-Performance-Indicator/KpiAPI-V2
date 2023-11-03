@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Kpi.Core.Repositories
 {
-    public interface IUserRolesProjectRepository
+    public interface IUserProjectRepository
     {
-        Task<List<Role>> GetByRolesByUserId(int userId);
+     
     }
 }

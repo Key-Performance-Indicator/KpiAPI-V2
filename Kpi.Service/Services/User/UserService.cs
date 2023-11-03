@@ -18,19 +18,25 @@ namespace Kpi.Service.Services.User
         private IJwtUtils _jwtUtils;
         private readonly AppSettings _appSettings;
         private readonly IUserRepository _userRepository;
-        private readonly IUserRolesProjectRepository _userRolesProjectRepository;
+        private readonly IUserProjectRepository _userProjectRepository;
+        private readonly IUserRolesRepository _userRolesRepository;
         public UserService(
             AppDbContext context,
             IJwtUtils jwtUtils,
-            IOptions<AppSettings> appSettings, IUserRepository userRepository, IUserRolesProjectRepository userRolesProjectRepository)
+            IOptions<AppSettings> appSettings,
+            IUserRepository userRepository, 
+            IUserProjectRepository userRolesProjectRepository,
+            IUserRolesRepository userRolesRepository)
         {
             _context = context;
             _jwtUtils = jwtUtils;
             _appSettings = appSettings.Value;
             _userRepository = userRepository;
-            _userRolesProjectRepository = userRolesProjectRepository;
-
+            _userProjectRepository = userRolesProjectRepository;
+            _userRolesRepository = userRolesRepository;
         }
+
+        #region UsersProcess
         public async Task<AuthenticateResponse> Authenticate(AuthenticateRequest model)
         {
             var user = await _userRepository.GetUserByUserName(model.UserName);
@@ -39,7 +45,7 @@ namespace Kpi.Service.Services.User
             if (user == null || !BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash))
                 return null;
 
-            var roleList = await _userRolesProjectRepository.GetByRolesByUserId(user.Id);
+            var roleList = await _userRolesRepository.GetRolesListByUserId(user.Id);
 
             // authentication successful so generate jwt token
             var jwtToken = _jwtUtils.GenerateJwtToken(user, roleList);
@@ -51,7 +57,7 @@ namespace Kpi.Service.Services.User
             // Kullanıcı kontrol 
             if (await _userRepository.GetUserByUserName(model.Username) != null)
                 throw new ApplicationException("Bu kullanıcı adı zaten kullanımda.");
-            
+
             if (model.PasswordConfirm != model.Password)
                 throw new ApplicationException("Şifre uyuşmuyor");
             //Hash Password
@@ -70,11 +76,6 @@ namespace Kpi.Service.Services.User
             return newUser;
         }
 
-        public async Task<List<Role>> GetRolesByUserID(int userId)
-        {
-            return await _userRolesProjectRepository.GetByRolesByUserId(userId);
-        }
-
         public async Task<List<Core.Models.User>> GetAll()
         {
             return await _userRepository.GetAllUsers();
@@ -82,9 +83,24 @@ namespace Kpi.Service.Services.User
 
         public async Task<Core.Models.User> GetById(int id)
         {
-            var user =await _userRepository.GetUserById(id);
+            var user = await _userRepository.GetUserById(id);
             if (user == null) throw new KeyNotFoundException("User not found");
             return user;
         }
+        #endregion
+
+
+
+        #region RoleProcess
+        public async Task<List<Role>> GetRolesByUserID(int userId)
+        {
+            return await _userRolesRepository.GetRolesListByUserId(userId);
+        }
+        public async Task<List<UserRoles>> AddUserRoles(List<int> roleIdList, int userId)
+        {
+            return await _userRolesRepository.AddUserRoles(roleIdList, userId);
+        }
+        #endregion
+
     }
 }

@@ -13,11 +13,13 @@ namespace Kpi.API.Controllers
     public class AdminController : ControllerBase
     {
         private readonly IUserService _userService;
+       
         public AdminController(IUserService userService)
         {
             _userService = userService;
         }
 
+        #region UsersProcess
         [HttpPost("[action]")]
         public async Task<IActionResult> AddUserAsync(RegisterRequest registerRequest)
         {
@@ -41,5 +43,29 @@ namespace Kpi.API.Controllers
             var user = await _userService.GetById(id);
             return Ok(user);
         }
+        #endregion
+
+        #region RolesProcess
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetRolesListByUserId(int userId)
+        {
+            var userRoles = await _userService.GetRolesByUserID(userId);
+            return Ok(userRoles);
+        }
+
+        [HttpPut("[action]")]
+        //Role Id listesi ve userID ye göre role ekleme
+        public async Task<IActionResult> AddRoleListUser(List<int> roleIdList, int userId)
+        {
+            var userRoles = await _userService.AddUserRoles(roleIdList, userId);
+            return Ok(userRoles);
+        }
+
+        #endregion
+
+
+
+
     }
 }
