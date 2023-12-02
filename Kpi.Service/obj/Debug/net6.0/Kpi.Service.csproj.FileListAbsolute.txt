@@ -36,3 +36,22 @@ C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.Service\ob
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.Service\obj\Debug\net6.0\Kpi.Service.pdb
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.Service\obj\Debug\net6.0\Kpi.Service.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\Key Performance Indıcator\KPI-Api\Kpi.Service\obj\Debug\net6.0\ref\Kpi.Service.dll
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\bin\Debug\net6.0\Kpi.Service.deps.json
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\bin\Debug\net6.0\Kpi.Service.runtimeconfig.json
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\bin\Debug\net6.0\Kpi.Service.dll
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\bin\Debug\net6.0\Kpi.Service.pdb
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\bin\Debug\net6.0\Kpi.Core.dll
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\bin\Debug\net6.0\Kpi.Repository.dll
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\bin\Debug\net6.0\Kpi.Repository.pdb
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\bin\Debug\net6.0\Kpi.Core.pdb
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\obj\Debug\net6.0\Kpi.Service.csproj.AssemblyReference.cache
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\obj\Debug\net6.0\Kpi.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\obj\Debug\net6.0\Kpi.Service.AssemblyInfoInputs.cache
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\obj\Debug\net6.0\Kpi.Service.AssemblyInfo.cs
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\obj\Debug\net6.0\Kpi.Service.csproj.CoreCompileInputs.cache
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\obj\Debug\net6.0\Kpi.Service.csproj.CopyComplete
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\obj\Debug\net6.0\Kpi.Service.dll
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\obj\Debug\net6.0\refint\Kpi.Service.dll
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\obj\Debug\net6.0\Kpi.Service.pdb
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\obj\Debug\net6.0\Kpi.Service.genruntimeconfig.cache
+C:\Users\Sena\Source\Repos\KpiAPI-V2\Kpi.Service\obj\Debug\net6.0\ref\Kpi.Service.dll

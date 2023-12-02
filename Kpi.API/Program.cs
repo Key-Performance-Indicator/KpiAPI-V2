@@ -11,6 +11,8 @@ using Kpi.Core.Repositories;
 using Kpi.Core.Services;
 using Kpi.Repository.Repositories;
 using Kpi.Service.Authentications;
+using Kpi.Service.Services.Sprint;
+using Kpi.Service.Services.Task;
 using Kpi.Service.Services.User;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
@@ -115,6 +117,11 @@ builder.Services.AddSwaggerGen(option =>
     builder.Services.AddScoped<IUserRepository, UserRepository>();
     builder.Services.AddScoped<IUserProjectRepository, UserProjectRepository>();
     builder.Services.AddScoped<IUserRolesRepository, UserRolesRepository>();
+    builder.Services.AddScoped<ISprintService, SprintService>();
+    builder.Services.AddScoped<ISprintRepository, SprintRepository>();
+    builder.Services.AddScoped<ITaskService, TasksService>();
+    builder.Services.AddScoped<ITaskRespoistory,TaskRespository>();
+
 
 var app = builder.Build();
 

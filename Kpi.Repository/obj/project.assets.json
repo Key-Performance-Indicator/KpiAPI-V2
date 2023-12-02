@@ -89,6 +89,22 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -1267,6 +1283,9 @@
       "Kpi.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
         "compile": {
           "bin/placeholder/Kpi.Core.dll": {}
         },
@@ -1388,6 +1407,19 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "sha512": "ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
+        "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -3934,19 +3966,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "C:\\Users\\Sena\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Repository\\Kpi.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Repository\\Kpi.Repository.csproj",
       "projectName": "Kpi.Repository",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Repository\\Kpi.Repository.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Repository\\obj\\",
+      "projectPath": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Repository\\Kpi.Repository.csproj",
+      "packagesPath": "C:\\Users\\Sena\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sena\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3960,8 +3992,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Core\\Kpi.Core.csproj": {
-              "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Core\\Kpi.Core.csproj"
+            "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Core\\Kpi.Core.csproj": {
+              "projectPath": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Core\\Kpi.Core.csproj"
             }
           }
         }
@@ -4017,7 +4049,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

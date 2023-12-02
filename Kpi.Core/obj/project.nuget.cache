@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "xIvkt3MK+7ebWN3LKXEbjMbcLuG4qwvn1Xw1LTi6g6RBKoq2iywqrSHT0/BYPD47yhwXdiXNNnya670JhlgfCw==",
+  "dgSpecHash": "FTvHgpBT+qmpPrrFItRM8FiYXr/XfPgj/1nBehniPYJs9G+TbagIKaVRoEGgPb1xXvuXJ30uNmdruTjYV/FuUQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Core\\Kpi.Core.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Core\\Kpi.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sena\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\Sena\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "C:\\Users\\Sena\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
+    "C:\\Users\\Sena\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512"
+  ],
   "logs": []
 }
