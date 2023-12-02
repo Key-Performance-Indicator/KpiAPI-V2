@@ -10,6 +10,7 @@ namespace Kpi.Core.Repositories
     public interface IUserRolesRepository
     {
         Task<List<Role>> GetRolesListByUserId(int userId);
+        Task<Role> AddUpdateRolesUser(Role role);
         Task<List<UserRoles>> AddUserRoles(List<int> roleIdList, int userId);
 
     }

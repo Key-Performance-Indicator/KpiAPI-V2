@@ -20,6 +20,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using NLayer.API.Modules;
 using NLayer.Repository;
+using Swashbuckle.AspNetCore.SwaggerUI;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -115,6 +116,7 @@ builder.Services.AddSwaggerGen(option =>
     builder.Services.AddScoped<IUserRepository, UserRepository>();
     builder.Services.AddScoped<IUserProjectRepository, UserProjectRepository>();
     builder.Services.AddScoped<IUserRolesRepository, UserRolesRepository>();
+    builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 
 var app = builder.Build();
 

@@ -26,6 +26,23 @@ namespace Kpi.Repository.Repositories
             return userRoles;
         }
 
+        public async Task<Role> AddUpdateRolesUser(Role role)
+        {
+            var existingRole = await _context.Roles
+                                       .FirstOrDefaultAsync(r => r.Id == role.Id);
+            if (existingRole == null)
+            {
+                _context.Roles.Add(role);
+            }
+            else
+            {
+                existingRole.RoleName = role.RoleName;
+                _context.Roles.Update(existingRole);
+            }
+            await _context.SaveChangesAsync();
+            return role;
+        }
+
         public async Task<List<UserRoles>> AddUserRoles(List<int> roleIdList, int userId)
         {
             var existingUserRoles = await _context.UserRoles

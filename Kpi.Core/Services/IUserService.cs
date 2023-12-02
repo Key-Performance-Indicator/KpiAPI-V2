@@ -14,6 +14,8 @@ namespace Kpi.Core.Services
         Task<List<Core.Models.User>> GetAll();
         Task<Core.Models.User> GetById(int id);
         Task<Core.Models.User> RegisterAsync(RegisterRequest model);
+        Task<Role> AddUpdateRole(Role role);
+        Task<Role> AddUpdateRoleUser(Role role);
         Task<List<Role>> GetRolesByUserID(int userId);
         Task<List<UserRoles>> AddUserRoles(List<int> roleIdList, int userId);
     }

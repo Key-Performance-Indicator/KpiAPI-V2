@@ -20,13 +20,15 @@ namespace Kpi.Service.Services.User
         private readonly IUserRepository _userRepository;
         private readonly IUserProjectRepository _userProjectRepository;
         private readonly IUserRolesRepository _userRolesRepository;
+        private readonly IRoleRepository _roleRepository;
         public UserService(
             AppDbContext context,
             IJwtUtils jwtUtils,
             IOptions<AppSettings> appSettings,
             IUserRepository userRepository, 
             IUserProjectRepository userRolesProjectRepository,
-            IUserRolesRepository userRolesRepository)
+            IUserRolesRepository userRolesRepository,
+            IRoleRepository roleRepository)
         {
             _context = context;
             _jwtUtils = jwtUtils;
@@ -34,6 +36,7 @@ namespace Kpi.Service.Services.User
             _userRepository = userRepository;
             _userProjectRepository = userRolesProjectRepository;
             _userRolesRepository = userRolesRepository;
+            _roleRepository = roleRepository;
         }
 
         #region UsersProcess
@@ -92,6 +95,14 @@ namespace Kpi.Service.Services.User
 
 
         #region RoleProcess
+        public async Task<Role> AddUpdateRole (Role role)
+        {
+            return await _roleRepository.AddUpdateRoles(role);
+        }
+        public async Task<Role> AddUpdateRoleUser(Role role)
+        {
+            return await _userRolesRepository.AddUpdateRolesUser(role);
+        }
         public async Task<List<Role>> GetRolesByUserID(int userId)
         {
             return await _userRolesRepository.GetRolesListByUserId(userId);

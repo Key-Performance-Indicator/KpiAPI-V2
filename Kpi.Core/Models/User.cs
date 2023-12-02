@@ -13,6 +13,7 @@ namespace Kpi.Core.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Username { get; set; }
+       // public string AvatarLink { get; set; }
         public ICollection<UserProject> UserProject { get; set; }   
         public ICollection<UserRoles> UserRoles { get; set; }
 

@@ -28,14 +28,14 @@ namespace Kpi.API.Controllers
         }
 
         [HttpGet("[action]")]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAllUsers()
         {
             var users = await _userService.GetAll();
             return Ok(users);
         }
 
         [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetByIdUser(int id)
         {
             // only admins can access other user records
             var currentUser = (User)HttpContext.Items["User"];
@@ -46,6 +46,20 @@ namespace Kpi.API.Controllers
         #endregion
 
         #region RolesProcess
+
+        /// <summary>
+        /// Role Update Add Metot
+        /// </summary>
+        /// <param name="role"></param>
+        /// <returns>Role</returns>
+        [HttpPost("[action]")]
+        public async Task<IActionResult> AddUpdateRole(Role role)
+        {
+            var res = await _userService.AddUpdateRole(role);
+            return Ok(res);
+        }
+
+        //public async Task<IActionResult> GetAl
 
         [HttpGet("[action]")]
         public async Task<IActionResult> GetRolesListByUserId(int userId)
@@ -65,7 +79,10 @@ namespace Kpi.API.Controllers
         #endregion
 
 
+        #region Project process
 
 
+
+        #endregion
     }
 }
