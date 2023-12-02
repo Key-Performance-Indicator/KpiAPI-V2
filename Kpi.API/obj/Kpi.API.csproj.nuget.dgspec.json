@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.API\\Kpi.API.csproj": {}
+    "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.API\\Kpi.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.API\\Kpi.API.csproj": {
+    "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.API\\Kpi.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.API\\Kpi.API.csproj",
+        "projectUniqueName": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.API\\Kpi.API.csproj",
         "projectName": "Kpi.API",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.API\\Kpi.API.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.API\\obj\\",
+        "projectPath": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.API\\Kpi.API.csproj",
+        "packagesPath": "C:\\Users\\Sena\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sena\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Service\\Kpi.Service.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Service\\Kpi.Service.csproj"
+              "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Service\\Kpi.Service.csproj": {
+                "projectPath": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Service\\Kpi.Service.csproj"
               }
             }
           }
@@ -100,21 +100,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Core\\Kpi.Core.csproj": {
+    "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Core\\Kpi.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Core\\Kpi.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Core\\Kpi.Core.csproj",
         "projectName": "Kpi.Core",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Core\\Kpi.Core.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Core\\obj\\",
+        "projectPath": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Core\\Kpi.Core.csproj",
+        "packagesPath": "C:\\Users\\Sena\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sena\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -139,6 +139,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -155,21 +161,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Repository\\Kpi.Repository.csproj": {
+    "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Repository\\Kpi.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Repository\\Kpi.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Repository\\Kpi.Repository.csproj",
         "projectName": "Kpi.Repository",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Repository\\Kpi.Repository.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Repository\\obj\\",
+        "projectPath": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Repository\\Kpi.Repository.csproj",
+        "packagesPath": "C:\\Users\\Sena\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sena\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -183,8 +189,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Core\\Kpi.Core.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Core\\Kpi.Core.csproj"
+              "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Core\\Kpi.Core.csproj": {
+                "projectPath": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Core\\Kpi.Core.csproj"
               }
             }
           }
@@ -240,21 +246,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Service\\Kpi.Service.csproj": {
+    "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Service\\Kpi.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Service\\Kpi.Service.csproj",
+        "projectUniqueName": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Service\\Kpi.Service.csproj",
         "projectName": "Kpi.Service",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Service\\Kpi.Service.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Service\\obj\\",
+        "projectPath": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Service\\Kpi.Service.csproj",
+        "packagesPath": "C:\\Users\\Sena\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sena\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -268,8 +274,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Repository\\Kpi.Repository.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\Desktop\\Key Performance Indıcator\\KPI-Api\\Kpi.Repository\\Kpi.Repository.csproj"
+              "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Repository\\Kpi.Repository.csproj": {
+                "projectPath": "C:\\Users\\Sena\\source\\repos\\KpiAPI-V2\\Kpi.Repository\\Kpi.Repository.csproj"
               }
             }
           }
@@ -292,9 +298,17 @@
               "target": "Package",
               "version": "[4.0.2, )"
             },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
             "Microsoft.AspNetCore.Http.Abstractions": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -313,7 +327,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
